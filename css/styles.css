@@ -100,7 +100,7 @@ img {
 
 /* Общее - основной контейнер */
 .container {
-  width: 1200px;
+  width: 1500px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -535,9 +535,6 @@ img {
   width: calc((100% - 2 * 30px) / 3);
 }
 
-.portfolio-card-image {
-  display: inline-block;
-}
 /* Заголовки под карточками в портфолио */
 .portfolio-card-title > .title {
   margin-bottom: 4px;
