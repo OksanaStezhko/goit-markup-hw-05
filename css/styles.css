@@ -142,9 +142,16 @@ img {
 }
 
 .background {
+  margin: 0px auto;
+  padding: 200px 0px;
   max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
+  height: 600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/primary.jpg');
 }
 
 .topline {
@@ -228,21 +235,6 @@ img {
   --color3: var(--text-accent);
 }
 
-/*Секция Шапка */
-.background {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 200px 0px;
-
-  height: 600px;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url('../images/primary.jpg');
-}
-
 /* Параметры заголовка h1 на странице Studio */
 .primary .title {
   margin-bottom: 30px;
@@ -271,6 +263,12 @@ img {
   border-radius: 4px;
   background-color: var(--bgd-accent);
   cursor: pointer;
+}
+
+/* Основной заголовок и кнопка в секции Шапка*/
+.primary-box {
+  width: 696px;
+  display: inline-block;
 }
 
 /* Секция Особенности */
