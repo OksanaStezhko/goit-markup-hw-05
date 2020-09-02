@@ -142,9 +142,9 @@ img {
 }
 
 .background {
+  max-width: 1600px;
   margin: 0px auto;
   padding: 200px 0px;
-  max-width: 1600px;
   height: 600px;
   background-image: linear-gradient(
       to right,
@@ -235,6 +235,12 @@ img {
   --color3: var(--text-accent);
 }
 
+/* Контейнер для заголовка и кноки секции Шапка */
+.primary-box {
+  display: inline-block;
+  width: 696px;
+}
+
 /* Параметры заголовка h1 на странице Studio */
 .primary .title {
   margin-bottom: 30px;
@@ -263,12 +269,6 @@ img {
   border-radius: 4px;
   background-color: var(--bgd-accent);
   cursor: pointer;
-}
-
-/* Основной заголовок и кнопка в секции Шапка*/
-.primary-box {
-  width: 696px;
-  display: inline-block;
 }
 
 /* Секция Особенности */
@@ -395,21 +395,23 @@ img {
 /* Секция Постоянные клиенты */
 /* Список логотипов-ссылок на сайты клиентов */
 .clients-list > .item {
-  justify-content: center;
-  align-items: center;
-
   width: calc((100% - 30px * 5) / 6);
-  height: 90px;
-  border: 1px solid var(--bgd-icon);
-  box-sizing: border-box;
-  border-radius: 4px;
 }
 .clients-list .item:not(:nth-child(6n)) {
   margin-right: 30px;
 }
+.client-link {
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 170px;
+  border: 1px solid var(--bgd-icon);
+  border-radius: 4px;
+}
 /* Ховер на логотипы-ссылки на сайты клиентов */
 .client-link:hover {
   --color4: var(--bgd-accent);
+  border: 1px solid var(--bgd-accent);
 }
 .clients .title {
   margin-bottom: 50px;
@@ -512,6 +514,9 @@ img {
 .portfolio-filter .button:focus {
   color: var(--text-white);
   background-color: var(--bgd-accent);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* Правый марджин для сетки многострочного контейнера, исключаем каждый третий */
@@ -529,6 +534,9 @@ img {
   width: calc((100% - 2 * 30px) / 3);
 }
 
+.portfolio-card-image {
+  display: inline-block;
+}
 /* Заголовки под карточками в портфолио */
 .portfolio-card-title > .title {
   margin-bottom: 4px;
@@ -560,7 +568,8 @@ img {
 
 /* Тень при ховере на карточках-ссылках портфолио */
 .portfolio-link {
-  display: block;
+  display: inline-block;
+  width: 370px;
 }
 
 .portfolio-link:hover {
