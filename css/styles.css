@@ -31,6 +31,8 @@
   --bdg-social: rgba(255, 255, 255, 0.1);
   --bgd-icon: #afb1b8;
   --bgd-footer-icon: rgba(255, 255, 255, 0.1);
+  --bgd-portfolio-footer: rgba(33, 150, 243, 0.9);
+  --bgd-activity: rgba(47, 48, 58, 0.8);
 }
 /* Пока отдельно указала белый цвет  для фона и для текста */
 /* Разные переменные, если нужно будет поменять переменную цвета текста, не затронет цвет фона и наоборот */
@@ -157,18 +159,21 @@ img {
 .topline {
   align-items: center;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 /* Правый марджин между логотипом и ссылками на страницы в основном nav */
 .studio-nav .logo {
   margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .studio-nav {
-  align-items: center;
+  align-items: baseline;
 }
 
+.studio-list-page {
+  padding-bottom: 32px;
+}
 /* Правые марджины внутри списков из nav и списка контактов */
 .studio-list-page > .item:not(:last-child),
 .studio-list-contacts > .item:not(:last-child) {
@@ -233,6 +238,20 @@ img {
 .studio-list-contacts .link:focus {
   color: var(--text-accent);
   --color3: var(--text-accent);
+}
+
+/* ховер для активной ссылки */
+.link.current::after {
+  position: relative;
+  left: 0;
+  top: 32px;
+
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--bgd-accent);
 }
 
 /* Контейнер для заголовка и кноки секции Шапка */
@@ -311,11 +330,30 @@ img {
 
 /* Карточка - наша деятельность */
 .activity-card {
+  position: relative;
+  display: inline-flex;
   justify-content: center;
   width: calc((100% - 30px * 2) / 3);
 }
+
 .activity-card:not(:nth-child(3n)) {
   margin-right: 30px;
+}
+
+.activity-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 27px 0px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-white);
+  background-color: var(--bgd-activity);
 }
 
 /* Секция Наша команда */
@@ -566,14 +604,39 @@ img {
 /* Тень при ховере на карточках-ссылках портфолио */
 .portfolio-link {
   display: inline-block;
+  position: relative;
   width: 370px;
 }
 
+.portfolio-card-image::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: 'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.';
+  display: block;
+  padding: 63px 24px;
+  width: 370px;
+  height: 294px;
+
+  opacity: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: var(--text-white);
+  background-color: var(--bgd-portfolio-footer);
+}
+
 .portfolio-link:hover {
+  border: 1px solid var(--bgd-border);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.portfolio-link:hover .portfolio-card-image::after {
+  opacity: 1;
+}
 /* ...........Для тестирования.................. */
 
 /* .container,
