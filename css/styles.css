@@ -36,6 +36,9 @@
   --bgd-activity: rgba(47, 48, 58, 0.8);
   --bgd-overlay: rgba(0, 0, 0, 0.2);
   --border-close: rgba(0, 0, 0, 0.1);
+
+  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --time: 250ms;
 }
 /* Пока отдельно указала белый цвет  для фона и для текста */
 /* Разные переменные, если нужно будет поменять переменную цвета текста, не затронет цвет фона и наоборот */
@@ -562,6 +565,9 @@ img {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  transition: background-color var(--time) var(--time-function),
+    color var(--time) var(--time-function);
 }
 /* Ховер и фокус для кнопок фильтров портфолио */
 .portfolio-filter .button:hover,
@@ -570,7 +576,6 @@ img {
   background-color: var(--bgd-accent);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-color: var(--bgd-accent);
   outline: none;
 }
 
@@ -587,6 +592,52 @@ img {
 /* Рассчет ширины карточки в портфолио */
 .portfolio-card {
   width: calc((100% - 2 * 30px) / 3);
+}
+
+/* Тень при ховере на карточках-ссылках портфолио */
+.portfolio-link {
+  width: 370px;
+  border: 1px solid transparent;
+}
+
+.portfolio-card-image {
+  position: relative;
+  height: 294px;
+  overflow: hidden;
+}
+
+.portfolio-card-overley {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  padding: 63px 24px;
+  width: 370px;
+  height: 294px;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: var(--text-white);
+  background-color: var(--bgd-portfolio-footer);
+
+  transform: translateY(100%);
+  transition: transform var(--time) var(--time-function);
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  border: 1px solid var(--bgd-border);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  outline: none;
+}
+
+.portfolio-link:hover .portfolio-card-overley,
+.portfolio-link:focus .portfolio-card-overley {
+  transform: translateY(0%);
 }
 
 /* Заголовки под карточками в портфолио */
@@ -616,46 +667,6 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
-}
-
-/* Тень при ховере на карточках-ссылках портфолио */
-.portfolio-link {
-  display: inline-block;
-  position: relative;
-  width: 370px;
-}
-
-.portfolio-card-image::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: 'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.';
-  display: block;
-  padding: 63px 24px;
-  width: 370px;
-  height: 294px;
-
-  opacity: 0;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-
-  color: var(--text-white);
-  background-color: var(--bgd-portfolio-footer);
-}
-
-.portfolio-link:hover,
-.portfolio-link:focus {
-  border: 1px solid var(--bgd-border);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  outline: none;
-}
-
-.portfolio-link:hover .portfolio-card-image::after,
-.portfolio-link:focus .portfolio-card-image::after {
-  opacity: 1;
 }
 
 .backdrop {
