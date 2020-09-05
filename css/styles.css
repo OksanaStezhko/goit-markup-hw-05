@@ -205,12 +205,17 @@ img {
 
 /* Параметры ссылок навигации по сайту */
 .studio-list-page .link {
+  transition: background-color var(--time) var(--time-function),
+    color var(--time) var(--time-function);
   color: var(--text-header);
 }
 
 /* Параметры ссылок для обратной связи */
 .studio-list-contacts .link {
   color: var(--text-main);
+  align-items: center;
+  transition: background-color var(--time) var(--time-function),
+    color var(--time) var(--time-function);
 }
 
 /* Иконки в хедере */
@@ -223,10 +228,6 @@ img {
   margin-right: 10px;
   width: 10px;
   height: 16px;
-}
-
-.studio-list-contacts .link {
-  align-items: center;
 }
 
 /* Общие параметры для двух списков верхней линии */
@@ -296,6 +297,8 @@ img {
   background-color: var(--bgd-accent);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+
+  transition: background-color var(--time) var(--time-function);
 }
 .primary .button:hover,
 .primary .button:focus {
@@ -437,6 +440,7 @@ img {
 .team .social-link {
   background-color: var(--bgd-footer-icon);
   --color4: var(--bgd-icon);
+  transition: background-color var(--time) var(--time-function);
 }
 .team .social-link:hover,
 .team .social-link:focus {
@@ -460,6 +464,7 @@ img {
   width: 170px;
   border: 1px solid var(--bgd-icon);
   border-radius: 4px;
+  transition: border-color var(--time) var(--time-function);
 }
 /* Ховер на логотипы-ссылки на сайты клиентов */
 .client-link:hover,
@@ -530,6 +535,7 @@ img {
   background-color: var(--bgd-footer-icon);
   --color4: var(--text-white);
   align-items: center;
+  transition: background-color var(--time) var(--time-function);
 }
 .footer .social-link:hover,
 .footer .social-link:focus {
@@ -677,22 +683,22 @@ img {
   height: 100%;
   background-color: var(--bgd-overlay);
 
-  transform: scale(1);
-  transition: opacity var(--time) var(--time-function),
-    transform 250ms var(--time-function);
+  transition: opacity var(--time) var(--time-function);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
-  transform: scale(0);
   pointer-events: none;
 }
 
-.modal {
+.backdrop.is-hidden .modal {
+  transform: scale(0);
+}
+
+.backdrop .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   width: 528px;
   height: 581px;
@@ -700,6 +706,9 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--time) var(--time-function) var(--time);
 }
 
 .button-close {
