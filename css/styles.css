@@ -682,7 +682,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: var(--bgd-overlay);
-
+  opacity: 1;
   transition: opacity var(--time) var(--time-function);
 }
 
