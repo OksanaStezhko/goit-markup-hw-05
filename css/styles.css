@@ -169,14 +169,10 @@ img {
 /* Правый марджин между логотипом и ссылками на страницы в основном nav */
 .studio-nav .logo {
   margin-right: 93px;
-  /* padding-top: 24px;
-  padding-bottom: 25px; */
 }
 
 .studio-nav {
   align-items: center;
-  /* padding-top: 24px;
-  padding-bottom: 25px; */
 }
 
 /* Правые марджины внутри списков из nav и списка контактов */
@@ -252,7 +248,7 @@ img {
 .link.current::after {
   position: relative;
   left: 0;
-  top: 30px;
+  top: 31px;
 
   content: '';
   display: block;
@@ -260,6 +256,9 @@ img {
   height: 4px;
   border-radius: 2px;
   background-color: var(--bgd-accent);
+}
+.primary {
+  border-top: 1px solid var(--bgd-line);
 }
 
 /* Контейнер для заголовка и кноки секции Шапка */
@@ -313,7 +312,6 @@ img {
 
 /* Карточка Особенности */
 .features-card {
-  /* width: 270px; */
   width: calc((100% - 30px * 3) / 4);
   text-align: start;
   line-height: 1.71;
