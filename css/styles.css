@@ -101,8 +101,6 @@ img {
 
 /* Общее - секции*/
 .section {
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 
@@ -126,7 +124,6 @@ img {
 }
 
 /* Общее шапка и подвал */
-/* .primary, */
 .footer {
   background-color: var(--bgd-header-footer);
 }
@@ -201,9 +198,9 @@ img {
 
 /* Параметры ссылок навигации по сайту */
 .studio-list-page .link {
+  color: var(--text-header);
   transition: background-color var(--time) var(--time-function),
     color var(--time) var(--time-function);
-  color: var(--text-header);
 }
 
 /* Параметры ссылок для обратной связи */
@@ -219,11 +216,15 @@ img {
   margin-right: 10px;
   width: 16px;
   height: 12px;
+  fill: var(--text-main);
+  transition: fill var(--time) var(--time-function);
 }
 .contact-tell-icon {
   margin-right: 10px;
   width: 10px;
   height: 16px;
+  fill: var(--text-main);
+  transition: fill var(--time) var(--time-function);
 }
 
 /* Общие параметры для двух списков верхней линии */
@@ -240,8 +241,13 @@ img {
 .studio-list-contacts .link:hover,
 .studio-list-contacts .link:focus {
   color: var(--text-accent);
-  --color3: var(--text-accent);
   outline: none;
+}
+.studio-list-contacts .link:hover .contact-mail-icon,
+.studio-list-contacts .link:focus .contact-mail-icon,
+.studio-list-contacts .link:hover .contact-tell-icon,
+.studio-list-contacts .link:focus .contact-tell-icon {
+  fill: var(--text-accent);
 }
 
 /* ховер для активной ссылки */
@@ -257,6 +263,7 @@ img {
   border-radius: 2px;
   background-color: var(--bgd-accent);
 }
+
 .primary {
   border-top: 1px solid var(--bgd-line);
 }
@@ -312,6 +319,7 @@ img {
 
 /* Карточка Особенности */
 .features-card {
+  /* width: 270px; */
   width: calc((100% - 30px * 3) / 4);
   text-align: start;
   line-height: 1.71;
@@ -436,15 +444,17 @@ img {
   justify-content: center;
   align-items: center;
 }
+
 .team .social-link {
   background-color: var(--bgd-footer-icon);
-  --color4: var(--bgd-icon);
-  transition: background-color var(--time) var(--time-function);
+  fill: var(--bgd-icon);
+  transition: background-color var(--time) var(--time-function),
+    fill var(--time) var(--time-function);
 }
 .team .social-link:hover,
 .team .social-link:focus {
   background-color: var(--bgd-accent);
-  --color4: var(--text-white);
+  fill: var(--text-white);
   outline: none;
 }
 
@@ -463,12 +473,15 @@ img {
   width: 170px;
   border: 1px solid var(--bgd-icon);
   border-radius: 4px;
-  transition: border-color var(--time) var(--time-function);
+  fill: var(--bgd-icon);
+  transition: border-color var(--time) var(--time-function),
+    fill var(--time) var(--time-function);
 }
+
 /* Ховер на логотипы-ссылки на сайты клиентов */
 .client-link:hover,
 .client-link:focus {
-  --color4: var(--bgd-accent);
+  fill: var(--bgd-accent);
   border: 1px solid var(--bgd-accent);
   outline: none;
 }
@@ -532,7 +545,7 @@ img {
 /* Ссыли на соц.сети в футере */
 .footer .social-link {
   background-color: var(--bgd-footer-icon);
-  --color4: var(--text-white);
+  fill: var(--text-white);
   align-items: center;
   transition: background-color var(--time) var(--time-function);
 }
@@ -605,7 +618,6 @@ img {
 /* Тень при ховере на карточках-ссылках портфолио */
 .portfolio-link {
   display: block;
-  /* width: 370px; */
   border: 1px solid var(--bgd-border);
 }
 
