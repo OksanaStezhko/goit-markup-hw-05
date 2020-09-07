@@ -95,6 +95,10 @@ img {
   display: flex;
 }
 
+.inline-flex-box {
+  display: inline-flex;
+}
+
 .wrap {
   flex-wrap: wrap;
 }
@@ -554,10 +558,14 @@ img {
   justify-content: center;
 }
 
+.portfolio-item {
+  margin-right: 8px;
+}
+
 /* Кнопки-фильтры в портфолио  */
 .portfolio-filter .button {
-  align-items: flex-start;
-  margin-right: 8px;
+  /* align-items: flex-start; */
+
   padding: 6px 22px;
 
   color: var(--text-header);
@@ -608,6 +616,7 @@ img {
 
 .portfolio-card-image {
   position: relative;
+  justify-content: center;
   height: 294px;
   overflow: hidden;
 }
