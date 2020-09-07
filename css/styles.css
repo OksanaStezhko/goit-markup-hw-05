@@ -175,8 +175,8 @@ img {
 
 .studio-nav {
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
 }
 
 .studio-list-page {
@@ -185,10 +185,12 @@ img {
 .studio-list-page > .item:not(:last-child),
 .studio-list-contacts > .item:not(:last-child) {
   margin-right: 50px;
+  padding: 32 px 0px;
 }
 
 /* Логотип в хедере*/
 .logo {
+  padding: 24px 0px 25px;
   font-family: Raleway, sans-serif;
   color: var(--text-header);
   font-weight: 700;
