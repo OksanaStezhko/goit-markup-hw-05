@@ -169,16 +169,17 @@ img {
 /* Правый марджин между логотипом и ссылками на страницы в основном nav */
 .studio-nav .logo {
   margin-right: 93px;
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
+}
+
+.studio-nav {
+  align-items: center;
   padding-top: 24px;
   padding-bottom: 25px;
 }
 
-.studio-nav {
-  align-items: baseline;
-}
-
 .studio-list-page {
-  padding-bottom: 32px;
 }
 /* Правые марджины внутри списков из nav и списка контактов */
 .studio-list-page > .item:not(:last-child),
@@ -252,7 +253,7 @@ img {
 .link.current::after {
   position: relative;
   left: 0;
-  top: 32px;
+  top: 30px;
 
   content: '';
   display: block;
