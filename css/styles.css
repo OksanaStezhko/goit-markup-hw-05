@@ -185,7 +185,7 @@ img {
 .studio-list-page > .item:not(:last-child),
 .studio-list-contacts > .item:not(:last-child) {
   margin-right: 50px;
-  padding: 32 px 0px;
+  /* padding: 32px 0px; */
 }
 
 /* Логотип в хедере*/
