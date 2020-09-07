@@ -634,7 +634,7 @@ img {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-
+  text-align: left;
   color: var(--text-white);
   background-color: var(--bgd-portfolio-footer);
 
