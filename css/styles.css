@@ -95,10 +95,6 @@ img {
   display: flex;
 }
 
-.inline-flex-box {
-  display: inline-flex;
-}
-
 .wrap {
   flex-wrap: wrap;
 }
@@ -549,6 +545,7 @@ img {
 
 /* Марджины и паддинги для списка фильтров в верхней части секции Портфолио*/
 .portfolio-filter {
+  display: inline-flex;
   margin-bottom: 34px;
   margin-right: auto;
   margin-left: auto;
@@ -564,8 +561,6 @@ img {
 
 /* Кнопки-фильтры в портфолио  */
 .portfolio-filter .button {
-  /* align-items: flex-start; */
-
   padding: 6px 22px;
 
   color: var(--text-header);
@@ -610,8 +605,9 @@ img {
 
 /* Тень при ховере на карточках-ссылках портфолио */
 .portfolio-link {
-  width: 370px;
-  border: 1px solid transparent;
+  display: block;
+  /* width: 370px; */
+  border: 1px solid var(--bgd-border);
 }
 
 .portfolio-card-image {
@@ -627,8 +623,8 @@ img {
   left: 0;
   content: '';
   padding: 63px 24px;
-  width: 370px;
-  height: 294px;
+  width: 100%;
+  height: 100%;
 
   font-weight: normal;
   font-size: 18px;
@@ -669,10 +665,6 @@ img {
 /* Бордер с трех сторон контейнера с текстом под имиджем карточек портфолио */
 .portfolio-card-title {
   padding: 20px 24px;
-
-  border-right: 1px solid var(--bgd-border);
-  border-bottom: 1px solid var(--bgd-border);
-  border-left: 1px solid var(--bgd-border);
   text-align: start;
 }
 
