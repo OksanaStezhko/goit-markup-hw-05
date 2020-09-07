@@ -126,7 +126,7 @@ img {
 }
 
 /* Общее шапка и подвал */
-.primary,
+/* .primary, */
 .footer {
   background-color: var(--bgd-header-footer);
 }
