@@ -179,13 +179,10 @@ img {
   padding-bottom: 25px; */
 }
 
-.studio-list-page {
-}
 /* Правые марджины внутри списков из nav и списка контактов */
 .studio-list-page > .item:not(:last-child),
 .studio-list-contacts > .item:not(:last-child) {
   margin-right: 50px;
-  /* padding: 32px 0px; */
 }
 
 /* Логотип в хедере*/
